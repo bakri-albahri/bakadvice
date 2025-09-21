@@ -9,7 +9,6 @@ function App() {
     axios.get('https://api.adviceslip.com/advice')
     .then((data) => setAdvice(data.data.slip.advice))
     .catch((error) => console.log(error))
-    .finally(console.log("first"))
   }, [advice])
   return (
     <div className='app'>
