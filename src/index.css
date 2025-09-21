@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import "tailwindcss";
+
+
+
+@layer base {
+    *{  
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }   
+    body{
+        height: 100vh;
+        font-family: "League Spartan", sans-serif;
+    }
+}
+
+@layer components {
+    .app{
+
+        background-image: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.3)) , url('./city.jpg');
+        @apply h-screen bg-cover bg-center flex justify-center items-center text-center ;
+
+        .card{
+
+            @apply  bg-[whitesmoke] w-[40%] max-h-[30%] flex justify-center items-center flex-col rounded-3xl p-[2%] text-xl;
+            box-shadow: 5px 5px ;
+          
+            .advice{
+            @apply flex items-center h-[580px] mb-4;
+            }
+            
+            button{
+                @apply relative outline-none rounded-[50px] flex justify-center items-center cursor-pointer 
+                        uppercase h-[200px] w-[210px] opacity-100 bg-[#ffffff] ;
+                border: 1px solid rgba(22, 76, 167, 0.6);
+
+                span{
+                    @apply leading-0 text-[#164ca7] text-xs font-black tracking-[0.7px] 
+                }
+
+                &:hover{
+                    animation: rotate 0.7s ease-in-out both;
+                    span{
+                        animation: storm 0.7s ease-in-out both;
+                        animation-delay: 0.06s;
+                    }
+                }
+            }
+
+        }
+        
+        
+    }
+}
+
+
+  
+  
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
