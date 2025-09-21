@@ -29,7 +29,7 @@
             .advice{
             @apply flex items-center h-[580px] mb-4;
             }
-            
+            border-radius: ;
             button{
                 @apply relative outline-none rounded-[50px] flex justify-center items-center cursor-pointer 
                         uppercase h-[200px] w-[210px] opacity-100 bg-[#ffffff] ;
